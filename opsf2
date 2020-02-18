@@ -1,0 +1,32 @@
+R1
+enable
+conf t
+router ospf 10
+network 172.16.1.0 0.0.0.255 area 0
+network 172.16.3.0 0.0.0.3 area 0
+network 192.168.10.4 0.0.0.3 area 0
+passive-interface default
+router-id 1.1.1.1
+
+
+R2
+enable
+conf t
+router ospf 10
+network 172.16.2.0 0.0.0.255 area 0
+network 172.16.3.0 0.0.0.3 area 0
+network 192.168.10.8 0.0.0.3 area 0
+passive-interface default
+router-id 2.2.2.2
+
+R3
+enable
+conf t
+router ospf 10
+network 192.168.1.0 0.0.0.255 area 0
+network 192.168.10.8 0.0.0.3 area 0
+network 192.168.10.4 0.0.0.3 area 0
+passive-interface default
+router-id 3.3.3.3
+
+
